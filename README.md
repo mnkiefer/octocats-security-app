@@ -69,8 +69,9 @@ Before we can run the application, we need to choose a GitHub organization that 
     - **Where can this GitHub App be installed?**:
       - [X] Any account
 
-4. Click on the "Create GitHub App" button to finish registration. In the **About** section, you can find your registered app's *App ID*. → :pencil2: `APP_ID`
-5. Scroll down the page to the **Private keys** section and press the "Generate a private key" button. This will trigger a file download. Securely store this file and your local machine and keep track of its location path. → :pencil2: `PRIVATE_KEY_PATH`
+4. Click on the "Create GitHub App" button. In the **About** section, you can find your registered app's *App ID*. → :pencil2: `APP_ID`
+5. Scroll down the page to the **Private keys** section and press the "Generate a private key" button. This will trigger a file download.<br>
+   Securely store this file and your local machine and keep track of its location path. → :pencil2: `PRIVATE_KEY_PATH`
 
 ### Install the GitHub App:
 
