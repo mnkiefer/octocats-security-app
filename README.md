@@ -3,7 +3,7 @@
 `octocats-security-app` is a [GitHub App](https://docs.github.com/en/apps/overview#about-github-apps) that ensures the use of *proper code reviews* in all repositories within a given [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations).
 
 > [!NOTE]
-> This application has been designed to serve as a *prototype* (see *Figure 1* below) to solve the following (fabricated) **customer scenario**:
+> This application has been designed to serve as a *prototype* (see **Figure 1** below) to solve the following (fabricated) **customer scenario**:
 >> "Our security team is asking for help ensuring proper reviews are being done to code being added into our repositories. We have hundreds of repositories in our organization. What is the best way we can achieve at scale? We are new to some of the out-of-the-box settings and the GitHub API. Can you please help us create a solution that will accomplish this for our security team?"
 
 ## Design
@@ -90,7 +90,7 @@ npm run dev
 ```
 In your console output, you can verify that your setup is complete by checking that the server is listening for events and that your smee channel is forwarding to your local application.
 
-You can now navigate to your organization page on GitHub and create a new repository, let's call it `my-repo-0`. Once your repository has been created, navigate to the new repositories **Issues** page and verify that an issues has been created, notifying you that the *main* branch protection is now active for this repository.
+You can now navigate to your organization page on GitHub and create a new repository, let's call it `my-repo-0`. Once your repository has been created, navigate to the new repositories **Issues** page and verify that an issue has been created (see **Figure 2** below), notifying you that the *main* branch protection is now active for this repository.
 
 <br>
 <figure>
