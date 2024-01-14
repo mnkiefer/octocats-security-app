@@ -10,15 +10,17 @@
 
 To meet the customer's requirements, the organization can install a [GitHub App](https://docs.github.com/en/apps/overview#about-github-apps) (such as `octocats-security-app`), which uses [GitHub Webhooks](https://docs.github.com/en/webhooks/about-webhooks#events) to react on repository creation and performs subsequent tasks (Apply protection, Create issue) by making requests to the [GitHub GraphQL API](https://docs.github.com/en/graphql/overview/about-the-graphql-api):
 
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./_assets/solution-design_dark.png">
-  <img alt="Solution design diagram" src="./_assets/solution-design_light.png">
-</picture>
-<em>Figure 1: Schematic diagram of the solution design.</em>
-
-<br>
+<br><br>
+<figure>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./_assets/solution-design_dark.png">
+    <img alt="Solution design diagram" src="./_assets/solution-design_light.png">
+  </picture>
+  <figcaption>
+    <b>Figure 1</b>: <i>Schematic diagram of the solution design.</i>
+  </figcaption>
+</figure>
+<br><br>
 
 The next section provides more details on the setup of this prototype and describes how to test-drive it locally.
 
@@ -42,7 +44,7 @@ Before we can run the application, we need to choose a GitHub organization that 
 > WEBHOOK_SECRET="YOUR_WEBHOOK_SECRET"
 > PRIVATE_KEY_PATH="YOUR_PRIVATE_KEY_PATH"
 > ```
-> For your convenience, they are marked in the following text with a :pencil2: symbol.
+> For your convenience, they are marked in the following text with a " :pencil2: " symbol.
 
 1. Navigate to your organization's *Settings* page.
 2. From the left-hand-side menu, choose: *Developer Settings* > *GitHub Apps*:<br>
@@ -57,8 +59,8 @@ Before we can run the application, we need to choose a GitHub organization that 
         - In a new browser window, navigate to [smee.io](https://smee.io/)
         - Click "Start a new channel"
         - Copy the full URL under "Webhook Proxy URL"
-        - Also replace the `YOUR_WEBHOOK_URL` string in your checked out application's _package.json_ file *scripts*.
-      - *Webhook secret*: Enter a random string (:pencil2: `PRIVATE_KEY_PATH`)
+        - Replace the `YOUR_WEBHOOK_URL` string in your checked out application's _package.json_ file *scripts*.
+      - *Webhook secret*: Enter a random string → :pencil2: `PRIVATE_KEY_PATH`
     - **Permissions > Repository permissions**:
       - `Administration: Read and write`
       - `Issues: Read and write`
@@ -67,9 +69,9 @@ Before we can run the application, we need to choose a GitHub organization that 
     - **Where can this GitHub App be installed?**:
       - [X] Any account
 
-    Click on the "Create GitHub App" button to finish registration. In the **About** section, you can find your registered app's *App ID* (:pencil2: `APP_ID`).
+    Click on the "Create GitHub App" button to finish registration. In the **About** section, you can find your registered app's *App ID*. → :pencil2: `APP_ID`
 
-    Scroll down the page to the **Private keys** section and press the "Generate a private key" button. This will trigger a file download. Securely store this file and your local machine and keep track of its location path (:pencil2: `PRIVATE_KEY_PATH`).
+    Scroll down the page to the **Private keys** section and press the "Generate a private key" button. This will trigger a file download. Securely store this file and your local machine and keep track of its location path. → :pencil2: `PRIVATE_KEY_PATH`
 
 ### Install the GitHub App:
 
@@ -90,15 +92,17 @@ In your console output, you can verify that your setup is complete by checking t
 
 You can now navigate to your organization page on GitHub and create a new repository, let's call it `my-repo-0`. Once your repository has been created, navigate to the new repositories **Issues** page and verify that an issues has been created, notifying you that the *main* branch protection is now active for this repository.
 
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./_assets/issue_dark.png">
-  <img alt="Issue created" src="./_assets/issue_light.png">
-</picture>
-<em>Figure 2: The issue created by the GitHub App to notify the repository's creator (in this case @mnkiefer) about the applied *main* branch protection by the security team.</em>
-
-<br>
+<br><br>
+<figure>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./_assets/issue_dark.png">
+    <img alt="Issue created" src="./_assets/issue_light.png">
+  </picture>
+  <figcaption>
+    <b>Figure 2</b>: <i>The issue created by the GitHub App to notify the repository's creator (in this case @mnkiefer) about the applied main branch protection by the security team.</i>
+  </figcaption>
+</figure>
+<br><br>
 
 You can also check your server output logs to see the key events/tasks that have taken place:
 ```
